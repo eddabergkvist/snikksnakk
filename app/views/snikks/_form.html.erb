@@ -11,12 +11,12 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body, id: :snikk_body %>
+  <div class="form-group">
+    <h4>Max 140</h4>
+    <%= form.text_area :body, class: "form-control input-lg" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit 'Upload Snikk', class: 'btn btn-success btn-lg' %>
   </div>
 <% end %>
