@@ -4,7 +4,7 @@ class SnikksController < ApplicationController
   # GET /snikks
   # GET /snikks.json
   def index
-    @snikks = Snikk.all
+    @snikks = Snikk.all.reverse_order
   end
 
   # GET /snikks/1
