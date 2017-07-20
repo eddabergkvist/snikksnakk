@@ -1,0 +1,22 @@
+<%= form_with(model: snikk, local: true) do |form| %>
+  <% if snikk.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(snikk.errors.count, "error") %> prohibited this snikk from being saved:</h2>
+
+      <ul>
+      <% snikk.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :snikk_body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
